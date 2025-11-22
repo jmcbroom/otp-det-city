@@ -1,8 +1,14 @@
 {
   "osmExtract": "detroit_michigan.osm.pbf",
   "transit": [
-    "ddot_gtfs_250901.zip",
-    "smart_gtfs_250901.zip"
+    {
+      "source": "ddot_gtfs_250901.zip",
+      "feedId": "DDOT"
+    },
+    {
+      "source": "smart_gtfs_250901.zip",
+      "feedId": "SMART"
+    }
   ],
   "buildStreets": true,
   "buildTransit": true,

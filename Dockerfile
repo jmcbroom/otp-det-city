@@ -25,5 +25,6 @@ WORKDIR /var/opentripplanner
 # Set memory limit (Adjust based on your PaaS plan)
 ENV JAVA_OPTS=-Xmx4G
 
-# Set the entrypoint to our debug script
-ENTRYPOINT ["/var/opentripplanner/entrypoint.sh"]
+# Build the graph and serve it. The base image's entrypoint will correctly
+# interpret these arguments.
+CMD ["--build", "--serve"]
