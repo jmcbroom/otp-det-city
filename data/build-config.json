@@ -8,6 +8,18 @@
     {
       "source": "smart_gtfs_250901.zip",
       "feedId": "SMART"
+    },
+    {
+      "source": "linq_gtfs.zip",
+      "feedId": "LINQ"
+    },
+    {
+      "source": "transitwindsor_gtfs_251004.zip",
+      "feedId": "TransitWindsor"
+    },
+    {
+      "source": "qline_gtfs_250425.zip",
+      "feedId": "QLine"
     }
   ],
   "buildStreets": true,
