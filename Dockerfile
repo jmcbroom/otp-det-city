@@ -21,5 +21,5 @@ WORKDIR /var/opentripplanner
 # Set memory limit (Adjust based on your PaaS plan)
 ENV JAVA_OPTS=-Xmx4G
 
-# Explicitly set the entrypoint and command
-CMD ["--build", "--serve"]
+# Explicitly define the full command to run OTP, making it robust for all platforms
+ENTRYPOINT ["/bin/sh", "-c", "java $JAVA_OPTS -cp @/app/jib-classpath-file @/app/jib-main-class-file --build --serve /var/opentripplanner"]
