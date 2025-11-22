@@ -15,8 +15,11 @@ ARG INTERLINE_API_TOKEN
 RUN curl -L -o /var/opentripplanner/detroit_michigan.osm.pbf \
     "https://app.interline.io/osm_extracts/download_latest?string_id=detroit_michigan&data_format=pbf&api_token=${INTERLINE_API_TOKEN}"
 
+# Set working directory
+WORKDIR /var/opentripplanner
+
 # Set memory limit (Adjust based on your PaaS plan)
 ENV JAVA_OPTS=-Xmx4G
 
 # Build the graph and serve it
-CMD ["--build", "--serve", "/var/opentripplanner"]
+CMD ["--build", "--serve"]
