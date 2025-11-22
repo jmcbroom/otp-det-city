@@ -19,4 +19,4 @@ RUN curl -L -o /var/opentripplanner/detroit_michigan.osm.pbf \
 ENV JAVA_OPTS=-Xmx4G
 
 # Build the graph and serve it
-CMD ["--build", "--serve"]
+CMD ["--build", "--serve", "/var/opentripplanner"]
