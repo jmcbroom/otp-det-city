@@ -5,6 +5,10 @@ USER root
 # Install curl (supports both Debian/Ubuntu and Alpine based images)
 RUN (apt-get update && apt-get install -y curl) || (apk add --no-cache curl)
 
+# Copy the new entrypoint script and make it executable
+COPY ./entrypoint.sh /var/opentripplanner/entrypoint.sh
+RUN chmod +x /var/opentripplanner/entrypoint.sh
+
 # Copy configuration and data files into the image first
 COPY ./data /var/opentripplanner
 
@@ -21,6 +25,5 @@ WORKDIR /var/opentripplanner
 # Set memory limit (Adjust based on your PaaS plan)
 ENV JAVA_OPTS=-Xmx4G
 
-# Build the graph and serve it. The base image's entrypoint will correctly
-# interpret these arguments.
-CMD ["--build", "--serve"]
+# Set the entrypoint to our debug script
+ENTRYPOINT ["/var/opentripplanner/entrypoint.sh"]
