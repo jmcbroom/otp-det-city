@@ -21,5 +21,5 @@ WORKDIR /var/opentripplanner
 # Set memory limit (Adjust based on your PaaS plan)
 ENV JAVA_OPTS=-Xmx4G
 
-# Build the graph and serve it
+# Explicitly set the entrypoint and command
 CMD ["--build", "--serve"]
