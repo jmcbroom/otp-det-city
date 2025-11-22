@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  opentripplanner:
+    image: opentripplanner/opentripplanner:latest
+    container_name: otp-detroit
+    ports:
+      - "8080:8080"
+      - "8081:8081"
+    volumes:
+      - ./data:/var/opentripplanner
+    environment:
+      - JAVA_OPTS=-Xmx4G
+    command: --serve
+    restart: unless-stopped

@@ -1,0 +1,12 @@
+# OTP generated files
+graph.obj
+*.log
+.env
+*.pbf
+
+# OS generated files
+.DS_Store
+
+# Editor directories
+.idea/
+.vscode/

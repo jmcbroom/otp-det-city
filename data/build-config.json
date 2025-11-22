@@ -1,0 +1,10 @@
+{
+  "osmExtract": "detroit_michigan.osm.pbf",
+  "transit": [
+    "ddot_gtfs_250901.zip",
+    "smart_gtfs_250901.zip"
+  ],
+  "buildStreets": true,
+  "buildTransit": true,
+  "fetchElevation": false
+}
