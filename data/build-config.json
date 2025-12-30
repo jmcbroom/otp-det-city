@@ -28,6 +28,10 @@
     {
       "source": "theride_gtfs_251116.zip",
       "feedId": "TheRide"
+    },
+    {
+      "source": "flintmta_gtfs_250908.zip",
+      "feedId": "FlintMTA"
     }
   ],
   "buildStreets": true,

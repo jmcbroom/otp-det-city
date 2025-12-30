@@ -23,7 +23,7 @@ RUN curl -L -o /var/opentripplanner/detroit_michigan.osm.pbf \
 WORKDIR /var/opentripplanner
 
 # Set memory limit (Adjust based on your PaaS plan)
-ENV JAVA_OPTS=-Xmx4G
+ENV JAVA_OPTS=-Xmx6G
 
 # Build the graph and serve it. The base image's entrypoint will correctly
 # interpret these arguments.
