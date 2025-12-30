@@ -20,6 +20,14 @@
     {
       "source": "qline_gtfs_250425.zip",
       "feedId": "QLine"
+    },
+    {
+      "source": "michiganflyer_gtfs.zip",
+      "feedId": "MichiganFlyer"
+    },
+    {
+      "source": "theride_gtfs_251116.zip",
+      "feedId": "TheRide"
     }
   ],
   "buildStreets": true,

@@ -11,6 +11,9 @@
     "transferPenalty": 0,
     "stairsReluctance": 2.0
   },
+  "transit": {
+    "timetableView": true
+  },
   "updaters": [
     {
       "type": "vehicle-rental",
