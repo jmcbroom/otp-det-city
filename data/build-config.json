@@ -18,6 +18,10 @@
       "feedId": "QLine"
     },
     {
+      "source": "linq_gtfs.zip",
+      "feedId": "Linq"
+    },
+    {
       "source": "michiganflyer_gtfs.zip",
       "feedId": "MichiganFlyer"
     },
