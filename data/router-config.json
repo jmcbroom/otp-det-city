@@ -38,6 +38,24 @@
       "frequencySec": 60,
       "url": "https://myddotbus.com/gtfsrt/vehicles",
       "feedId": "DDOT"
+    },
+    {
+      "type": "real-time-alerts",
+      "frequencySec": 60,
+      "url": "http://bustime.smartbus.org/gtfsrt/alerts",
+      "feedId": "SMART"
+    },
+    {
+      "type": "stop-time-updater",
+      "frequencySec": 60,
+      "url": "http://bustime.smartbus.org/gtfsrt/trips",
+      "feedId": "SMART"
+    },
+    {
+      "type": "vehicle-positions",
+      "frequencySec": 60,
+      "url": "http://bustime.smartbus.org/gtfsrt/vehicles",
+      "feedId": "SMART"
     }
   ]
 }

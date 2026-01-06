@@ -1,40 +1,49 @@
 {
-  "osmExtract": "detroit_michigan.osm.pbf",
-  "transit": [
+  "osm": [
     {
-      "source": "ddot_gtfs_250901.zip",
-      "feedId": "DDOT"
-    },
-    {
-      "source": "smart_gtfs_260105.zip",
-      "feedId": "SMART"
-    },
-    {
-      "source": "transitwindsor_gtfs_251004.zip",
-      "feedId": "TransitWindsor"
-    },
-    {
-      "source": "qline_gtfs_250425.zip",
-      "feedId": "QLine"
-    },
-    {
-      "source": "linq_gtfs.zip",
-      "feedId": "Linq"
-    },
-    {
-      "source": "michiganflyer_gtfs.zip",
-      "feedId": "MichiganFlyer"
-    },
-    {
-      "source": "theride_gtfs_251116.zip",
-      "feedId": "TheRide"
-    },
-    {
-      "source": "flintmta_gtfs_250908.zip",
-      "feedId": "FlintMTA"
+      "source": "detroit_michigan.osm.pbf"
     }
   ],
-  "buildStreets": true,
-  "buildTransit": true,
-  "fetchElevation": false
+  "transitFeeds": [
+    {
+      "type": "gtfs",
+      "feedId": "DDOT",
+      "source": "ddot_gtfs_250901.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "SMART",
+      "source": "smart_gtfs_260105.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "TransitWindsor",
+      "source": "transitwindsor_gtfs_251004.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "QLine",
+      "source": "qline_gtfs_250425.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "Linq",
+      "source": "linq_gtfs.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "MichiganFlyer",
+      "source": "michiganflyer_gtfs.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "TheRide",
+      "source": "theride_gtfs_251116.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "FlintMTA",
+      "source": "flintmta_gtfs_250908.zip"
+    }
+  ]
 }
