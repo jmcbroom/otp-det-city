@@ -4,6 +4,10 @@ graph.obj
 .env
 *.pbf
 
+# Local-only docker overrides and GTFS working dirs
+docker-compose.override.yml
+data/*_src/
+
 # OS generated files
 .DS_Store
 

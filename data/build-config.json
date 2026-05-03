@@ -9,17 +9,17 @@
     {
       "type": "gtfs",
       "feedId": "DDOT",
-      "source": "ddot_gtfs_260126.zip"
+      "source": "ddot_gtfs_260427.zip"
     },
     {
       "type": "gtfs",
       "feedId": "SMART",
-      "source": "smart_gtfs_260105.zip"
+      "source": "smart_gtfs_260420.zip"
     },
     {
       "type": "gtfs",
       "feedId": "TransitWindsor",
-      "source": "transitwindsor_gtfs_260208.zip"
+      "source": "transitwindsor_gtfs_260405.zip"
     },
     {
       "type": "gtfs",
@@ -39,7 +39,7 @@
     {
       "type": "gtfs",
       "feedId": "TheRide",
-      "source": "theride_gtfs_260125.zip"
+      "source": "theride_gtfs_260503.zip"
     },
     {
       "type": "gtfs",
