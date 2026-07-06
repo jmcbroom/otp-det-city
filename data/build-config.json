@@ -1,5 +1,5 @@
 {
-  "timeZone": "America/Detroit",
+  "transitModelTimeZone": "America/Detroit",
   "osm": [
     {
       "source": "detroit_michigan.osm.pbf"
@@ -9,17 +9,17 @@
     {
       "type": "gtfs",
       "feedId": "DDOT",
-      "source": "ddot_gtfs_260427.zip"
+      "source": "ddot_gtfs_260629.zip"
     },
     {
       "type": "gtfs",
       "feedId": "SMART",
-      "source": "smart_gtfs_260420.zip"
+      "source": "smart_gtfs_260622.zip"
     },
     {
       "type": "gtfs",
       "feedId": "TransitWindsor",
-      "source": "transitwindsor_gtfs_260405.zip"
+      "source": "transitwindsor_gtfs_260628.zip"
     },
     {
       "type": "gtfs",
@@ -44,7 +44,7 @@
     {
       "type": "gtfs",
       "feedId": "FlintMTA",
-      "source": "flintmta_gtfs_260112.zip"
+      "source": "flintmta_gtfs_260518.zip"
     }
   ]
 }
