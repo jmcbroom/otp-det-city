@@ -9,17 +9,17 @@
     {
       "type": "gtfs",
       "feedId": "DDOT",
-      "source": "ddot_gtfs_260629.zip"
+      "source": "ddot_gtfs_260907.zip"
     },
     {
       "type": "gtfs",
       "feedId": "SMART",
-      "source": "smart_gtfs_260622.zip"
+      "source": "smart_gtfs_260907.zip"
     },
     {
       "type": "gtfs",
       "feedId": "TransitWindsor",
-      "source": "transitwindsor_gtfs_260628.zip"
+      "source": "transitwindsor_gtfs_260906.zip"
     },
     {
       "type": "gtfs",
@@ -33,18 +33,18 @@
     },
     {
       "type": "gtfs",
-      "feedId": "MichiganFlyer",
-      "source": "michiganflyer_gtfs.zip"
+      "feedId": "D2A2",
+      "source": "d2a2dax_gtfs_260911.zip"
     },
     {
       "type": "gtfs",
       "feedId": "TheRide",
-      "source": "theride_gtfs_260503.zip"
+      "source": "theride_gtfs_260823.zip"
     },
     {
       "type": "gtfs",
       "feedId": "FlintMTA",
-      "source": "flintmta_gtfs_260518.zip"
+      "source": "flintmta_gtfs_260804.zip"
     }
   ]
 }
