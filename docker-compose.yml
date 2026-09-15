@@ -1,11 +1,7 @@
-version: '3.8'
-
 services:
   opentripplanner:
     build:
       context: .
-      args:
-        - INTERLINE_API_TOKEN=${INTERLINE_API_TOKEN}
     container_name: otp-detroit
     ports:
       - "8080:8080"

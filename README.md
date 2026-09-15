@@ -13,8 +13,7 @@ A Docker-based setup for running OpenTripPlanner (OTP) with Metro Detroit transi
 2. **Set up environment variables**
    ```bash
    cp .env.example .env
-   # Edit .env and add your INTERLINE_API_TOKEN
-   # Get one at https://app.interline.io/
+   # Optionally adjust JAVA_OPTS
    ```
 
 3. **Start OpenTripPlanner**
@@ -59,7 +58,9 @@ GTFS feed files are committed to this repository (in `data/`) and updated period
 
 ### OpenStreetMap Data
 
-The OSM extract (`detroit_michigan.osm.pbf`) is **downloaded during the Docker build** from Interline using your API token. This keeps the repository size manageable.
+The OSM extract (`detroit_michigan.osm.pbf`, ~150 MB, bbox -84.158,41.723 to -82.375,43.168 — Detroit, Windsor, Ann Arbor, Flint) is **downloaded during the Docker build** from a release asset on this repository (`osm-2025-11-21`). It is too large to commit directly.
+
+It was originally produced by Interline OSM Extracts, which stopped publishing city extracts in 2026. To refresh it: build a new `.pbf` for the same bounding box (e.g. `osmium extract` from Geofabrik's Michigan and Ontario downloads), upload it as a new release asset, and bump the `OSM_RELEASE` build arg in the `Dockerfile`.
 
 ## Configuration
 
@@ -68,9 +69,6 @@ The OSM extract (`detroit_michigan.osm.pbf`) is **downloaded during the Docker b
 Set these in your `.env` file:
 
 ```bash
-# Required: Interline API token for OSM data
-INTERLINE_API_TOKEN=your_token_here
-
 # Optional: Java memory settings (adjust based on available RAM)
 JAVA_OPTS=-Xmx4G
 ```
@@ -124,12 +122,11 @@ This repository is designed to deploy to PaaS platforms that support Docker.
 ### Deployment Steps
 
 1. Connect your GitHub repository to your chosen platform
-2. Set the build argument `INTERLINE_API_TOKEN` in the platform's settings
-3. Configure the domain to point to `otp.det.city` (or your preferred subdomain)
-4. Deploy
+2. Configure the domain to point to `otp.det.city` (or your preferred subdomain)
+3. Deploy
 
 The platform will automatically:
-- Download the OSM extract using your API token
+- Download the OSM extract from the GitHub release
 - Build the Docker image
 - Start the container
 - Handle SSL/HTTPS with automatic certificate management
@@ -172,9 +169,9 @@ The `router-config.json` includes real-time updaters:
 
 ## Troubleshooting
 
-### Build Fails with API Token Error
+### Build Fails Downloading the OSM Extract
 
-Ensure `INTERLINE_API_TOKEN` is set correctly in your `.env` file or platform settings.
+The Dockerfile fetches `detroit_michigan.osm.pbf` from a GitHub release on this repo (`OSM_RELEASE` build arg). Check that the release and its asset still exist. `curl -f` makes the build fail here rather than continue with a broken file and an empty street graph.
 
 ### Out of Memory
 
@@ -198,7 +195,7 @@ docker compose logs opentripplanner
 - [OTP Documentation](https://docs.opentripplanner.org/)
 - [OTP GitHub](https://github.com/opentripplanner/OpenTripPlanner)
 - [GTFS Specification](https://gtfs.org/)
-- [Interline Open Data](https://www.interline.io/)
+- [OpenStreetMap](https://www.openstreetmap.org/)
 
 ## License
 

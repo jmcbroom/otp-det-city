@@ -12,12 +12,13 @@ RUN chmod +x /var/opentripplanner/entrypoint.sh
 # Copy configuration and data files into the image first
 COPY ./data /var/opentripplanner
 
-# Build argument for the API token
-ARG INTERLINE_API_TOKEN
-
-# Download OSM data (this happens after copying data files)
-RUN curl -L -o /var/opentripplanner/detroit_michigan.osm.pbf \
-    "https://app.interline.io/osm_extracts/download_latest?string_id=detroit_michigan&data_format=pbf&api_token=${INTERLINE_API_TOKEN}"
+# OSM extract, served as a release asset on this repo (149 MB, too big to
+# commit). Interline's city extracts stopped being published in 2026; see
+# README. -f makes a failed download fail the build instead of leaving an
+# error page where the .pbf should be.
+ARG OSM_RELEASE=osm-2025-11-21
+RUN curl -fL -o /var/opentripplanner/detroit_michigan.osm.pbf \
+    "https://github.com/jmcbroom/otp-det-city/releases/download/${OSM_RELEASE}/detroit_michigan.osm.pbf"
 
 # Set working directory
 WORKDIR /var/opentripplanner
