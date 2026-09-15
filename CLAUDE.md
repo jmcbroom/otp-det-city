@@ -30,7 +30,7 @@ docker compose down
 
 ## Architecture
 
-- **OTP Container**: Based on `opentripplanner/opentripplanner:latest`, runs on ports 8080 (API) and 8081
+- **OTP Container**: Based on `opentripplanner/opentripplanner:2.9.0` (pinned; 2.10+ breaks `--build --serve`, see Dockerfile comment), runs on ports 8080 (API) and 8081
 - **Graph Building**: OTP builds a routing graph at container startup from GTFS + OSM data (`--build --serve`)
 - **OSM Data**: Downloaded during Docker build from a GitHub release asset on this repo (`OSM_RELEASE` build arg in `Dockerfile`, default `osm-2025-11-21`). Interline's city extracts stopped being published in 2026.
 

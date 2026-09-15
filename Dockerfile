@@ -1,4 +1,9 @@
-FROM opentripplanner/opentripplanner:latest
+# Pinned: 2.10.0 and the `latest` dev snapshots have an open bug where
+# `--build --serve` maps the Raptor transit data before the graph is built, so
+# every transit search fails (opentripplanner/OpenTripPlanner#7948). 2.9.0 is
+# the last release that builds and serves in one run. If moving past it, either
+# wait for the fix or split into `--build --save` + `--load --serve`.
+FROM opentripplanner/opentripplanner:2.9.0
 
 USER root
 
