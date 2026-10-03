@@ -36,7 +36,7 @@ docker compose down
 
 ## Data Files (in `data/`)
 
-- **GTFS feeds**: `*_gtfs_*.zip` files for each transit agency (DDOT, SMART, QLine, LINQ, Transit Windsor, D2A2/DAX, TheRide, Flint MTA)
+- **GTFS feeds**: `*_gtfs_*.zip` files for each transit agency (DDOT, SMART, QLine, LINQ, Transit Windsor, D2A2/DAX/Michigan Flyer, TheRide, Flint MTA, U-M, People Mover, Blue Water, Sarnia)
 - **build-config.json**: Defines which GTFS feeds to include and the OSM extract filename
 - **router-config.json**: Runtime routing parameters and real-time GTFS-RT/GBFS updaters
 

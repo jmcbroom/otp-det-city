@@ -19,12 +19,12 @@
     {
       "type": "gtfs",
       "feedId": "TransitWindsor",
-      "source": "transitwindsor_gtfs_260906.zip"
+      "source": "transitwindsor_gtfs_260920.zip"
     },
     {
       "type": "gtfs",
       "feedId": "QLine",
-      "source": "qline_gtfs_250425.zip"
+      "source": "qline_gtfs_260911.zip"
     },
     {
       "type": "gtfs",
@@ -34,17 +34,37 @@
     {
       "type": "gtfs",
       "feedId": "D2A2",
-      "source": "d2a2dax_gtfs_260911.zip"
+      "source": "d2a2_flyer_dax_gtfs_260911.zip"
     },
     {
       "type": "gtfs",
       "feedId": "TheRide",
-      "source": "theride_gtfs_260823.zip"
+      "source": "theride_gtfs_260912.zip"
     },
     {
       "type": "gtfs",
       "feedId": "FlintMTA",
-      "source": "flintmta_gtfs_260804.zip"
+      "source": "flintmta_gtfs_261002.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "UMich",
+      "source": "umich_gtfs_260823.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "PeopleMover",
+      "source": "peoplemover_gtfs_241125.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "BWAT",
+      "source": "bwat_gtfs_260602.zip"
+    },
+    {
+      "type": "gtfs",
+      "feedId": "Sarnia",
+      "source": "sarnia_gtfs_260930.zip"
     }
   ]
 }

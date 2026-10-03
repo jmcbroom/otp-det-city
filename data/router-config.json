@@ -56,6 +56,90 @@
       "frequencySec": 60,
       "url": "http://bustime.smartbus.org/gtfsrt/vehicles",
       "feedId": "SMART"
+    },
+    {
+      "type": "real-time-alerts",
+      "frequencySec": 60,
+      "url": "https://rt.theride.org/gtfsrt/alerts",
+      "feedId": "TheRide"
+    },
+    {
+      "type": "stop-time-updater",
+      "frequencySec": 60,
+      "url": "https://rt.theride.org/gtfsrt/trips",
+      "feedId": "TheRide"
+    },
+    {
+      "type": "vehicle-positions",
+      "frequencySec": 60,
+      "url": "https://rt.theride.org/gtfsrt/vehicles",
+      "feedId": "TheRide"
+    },
+    {
+      "type": "stop-time-updater",
+      "frequencySec": 60,
+      "url": "https://windsor.mapstrat.com/current/gtfrealtime_TripUpdates.bin",
+      "feedId": "TransitWindsor"
+    },
+    {
+      "type": "vehicle-positions",
+      "frequencySec": 60,
+      "url": "https://windsor.mapstrat.com/current/gtfrealtime_VehiclePositions.bin",
+      "feedId": "TransitWindsor"
+    },
+    {
+      "type": "real-time-alerts",
+      "frequencySec": 60,
+      "url": "https://mbus.ltp.umich.edu/gtfsrt/alerts",
+      "feedId": "UMich"
+    },
+    {
+      "type": "stop-time-updater",
+      "frequencySec": 60,
+      "url": "https://mbus.ltp.umich.edu/gtfsrt/trips",
+      "feedId": "UMich"
+    },
+    {
+      "type": "vehicle-positions",
+      "frequencySec": 60,
+      "url": "https://mbus.ltp.umich.edu/gtfsrt/vehicles",
+      "feedId": "UMich"
+    },
+    {
+      "type": "real-time-alerts",
+      "frequencySec": 60,
+      "url": "https://flint.connexionz.net/rtt/public/utility/gtfsrealtime.aspx/alert",
+      "feedId": "FlintMTA"
+    },
+    {
+      "type": "stop-time-updater",
+      "frequencySec": 60,
+      "url": "https://flint.connexionz.net/rtt/public/utility/gtfsrealtime.aspx/tripupdate",
+      "feedId": "FlintMTA"
+    },
+    {
+      "type": "vehicle-positions",
+      "frequencySec": 60,
+      "url": "https://flint.connexionz.net/rtt/public/utility/gtfsrealtime.aspx/vehicleposition",
+      "feedId": "FlintMTA"
+    },
+    {
+      "type": "real-time-alerts",
+      "frequencySec": 60,
+      "url": "https://metrolinx.tmix.se/gtfs-realtime-sarnia/alerts.pb",
+      "feedId": "Sarnia"
+    },
+    {
+      "type": "stop-time-updater",
+      "frequencySec": 60,
+      "url": "https://metrolinx.tmix.se/gtfs-realtime-sarnia/tripupdates.pb",
+      "feedId": "Sarnia"
+    },
+    {
+      "type": "vehicle-positions",
+      "frequencySec": 60,
+      "url": "https://metrolinx.tmix.se/gtfs-realtime-sarnia/vehiclepositions.pb",
+      "feedId": "Sarnia"
     }
   ]
 }
